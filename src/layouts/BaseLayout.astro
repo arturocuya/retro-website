@@ -1,0 +1,113 @@
+---
+const { title } = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <style>
+            body {
+                cursor: url("/images/cursor.png"), auto;
+            }
+
+            p {
+                padding: 0;
+                margin: 0;
+            }
+
+            .window {
+                min-width: 300px;
+                max-width: 1000px;
+                min-height: 300px;
+                max-height: 90vh;
+                background: #bfbfbf;
+                position: fixed;
+                left: 30px;
+                top: 40px;
+                display: flex;
+                flex-direction: column;
+                padding: 4px;
+                overflow-y: scroll;
+            }
+
+            .window-top {
+                background: #000080;
+                padding: 10px;
+                position: sticky;
+                top: 0;
+            }
+        </style></head
+    >
+
+    <body style="width: 100vw; height: 100vh; background: #008080">
+        <div id="window" class="window">
+            <div id="window-top" class="window-top">
+                <p style="color: white; user-select: none">{title}</p>
+            </div>
+
+            <div style="padding: 12px">
+                <slot />
+            </div>
+        </div>
+    </body>
+    <script is:inline>
+        const myWindow = document.getElementById("window");
+        const windowTop = document.getElementById("window-top");
+
+        const clickSounds = [
+            new Audio("/sounds/click/click1.mp3"),
+            new Audio("/sounds/click/click2.mp3"),
+        ];
+
+        let move = false;
+        let offsetX = 0;
+        let offsetY = 0;
+
+        windowTop.addEventListener("mousedown", (e) => {
+            move = true;
+            offsetX = e.offsetX;
+            offsetY = e.offsetY;
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("loaded");
+            const startSound = new Audio("/sounds/start.mp3");
+            startSound.play();
+        });
+
+        document.addEventListener("mousedown", (e) => {
+            clickSounds[Math.floor(Math.random() * clickSounds.length)]
+                .cloneNode()
+                .play();
+        });
+
+        document.addEventListener("mouseup", (e) => {
+            move = false;
+        });
+
+        document.addEventListener("mousemove", function (e) {
+            if (!move) {
+                return;
+            }
+
+            if (e.clientX < 0 || e.clientX > window.innerWidth) {
+                return;
+            }
+
+            if (e.clientY < 0 || e.clientY > window.innerHeight) {
+                return;
+            }
+
+            const finalX = e.clientX - offsetX;
+            const finalY = e.clientY - offsetY;
+
+            myWindow.style.position = "fixed";
+            myWindow.style.left = `${finalX}px`;
+            myWindow.style.top = `${finalY}px`;
+        });
+    </script>
+</html>
