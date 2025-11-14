@@ -5,7 +5,7 @@ pubTime: "22:57"
 layout: "../../layouts/PostLayout.astro"
 ---
 
-El otro día estaba sentado en la sala, frente a la tele, tratando de escuchar música de forma presente, sin mirar mi teléfono o hacer otra cosa. Como lo hacían los antiguos. Me di cuenta de que escuchar música japonesa antigua me da esperanza. El artista que aparece frente a mí se llama Masayoshi Yamasaki. Está parado frente a un canal en un día soleado y viste una camisa de flannel encima de un polo estampado. Su cabello se ve como mal secado. En la portada donde sale dice que el 9/25 fue su aniversario número treinta.
+El otro día estaba sentado en la sala, frente a la tele, tratando de escuchar música de forma presente, sin mirar mi teléfono o hacer otra cosa. Como lo hacían los antiguos. Me di cuenta de que escuchar música japonesa antigua me da esperanza. El artista que aparece frente a mí se llama Masayoshi Yamazaki. Está parado frente a un canal en un día soleado y viste una camisa de flannel encima de un polo estampado. Su cabello se ve como mal secado. En la portada donde sale dice que el 9/25 fue su aniversario número treinta.
 
 No puedo sentarme a escribir algo por más de treinta minutos y este tipo ha estado haciendo arte por treinta años y dos meses. ¡Y es un tipo de lo más normal! O bueno, tal vez no lo sea. Puede que tenga una historia de vida compleja y llena de pasiones que nunca podría imaginar, mucho menos vivir, pero por ahora y hasta que inevitablemente lo busque mañana temprano, escojo creer que es solo un tipo porque, como estaba diciendo, ese porte de tipo normal me da esperanza de que algún día podré hacer arte que valga la pena y a la vez seguir siendo solo un tipo.
 
@@ -26,3 +26,11 @@ Y como para cerrar el círculo, volvemos a escuchar a YoshiMa, nombre que estoy 
 Ahora siento que en esta canción particular también él me está mirando al alma, pero no de forma introspectiva, sino gritándome: ESCRIBE SOBRE TU VIDA, IDIOTA.
 
 Eso haré, querido, eso haré.
+
+![Masayoshi Yamazaki](/images/posts/yoshima.jpeg)
+
+![Yumi Arai](/images/posts/yumi-arai.jpeg)
+
+![Indigo la end](/images/posts/indigo-la-end.jpeg)
+
+![Kaneko Ayano](/images/posts/kaneko-ayano.jpeg)

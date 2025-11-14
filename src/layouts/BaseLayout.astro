@@ -14,14 +14,13 @@ const { title } = Astro.props;
                 cursor: url("/images/cursor.png"), auto;
             }
 
-            p {
-                padding: 0;
-                margin: 0;
+            :global(img) {
+                max-width: 500px;
             }
 
             .window {
                 min-width: 300px;
-                max-width: 1000px;
+                max-width: 800px;
                 min-height: 300px;
                 max-height: 90vh;
                 background: #bfbfbf;
@@ -39,6 +38,11 @@ const { title } = Astro.props;
                 padding: 10px;
                 position: sticky;
                 top: 0;
+            }
+
+            .window-top > p {
+                padding: 0;
+                margin: 0;
             }
         </style></head
     >
