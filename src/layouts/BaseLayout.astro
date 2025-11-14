@@ -1,5 +1,7 @@
 ---
 const { title } = Astro.props;
+
+import penguinImg from "../../src/images/penguin.png";
 ---
 
 <html lang="en">
@@ -12,6 +14,7 @@ const { title } = Astro.props;
         <style>
             body {
                 cursor: url("/images/cursor.png"), auto;
+                margin: 0;
             }
 
             :global(img) {
@@ -22,41 +25,63 @@ const { title } = Astro.props;
                 min-width: 300px;
                 max-width: 800px;
                 min-height: 300px;
-                max-height: 90vh;
+                max-height: 80vh;
                 background: #bfbfbf;
                 position: fixed;
                 left: 30px;
                 top: 40px;
                 display: flex;
                 flex-direction: column;
-                padding: 4px;
                 overflow-y: scroll;
             }
 
             .window-top {
                 background: #000080;
                 padding: 10px;
-                position: sticky;
-                top: 0;
+                border: solid #bfbfbf 3px
             }
 
             .window-top > p {
                 padding: 0;
                 margin: 0;
             }
-        </style></head
-    >
+
+            .start-btn {
+                border: 1px solid gray;
+                padding: 6px;
+                margin: 2px;
+                display: flex;
+                flex-direction: row;
+                gap: 6px;
+                align-items: center;
+                width: min-content;
+                color: black;
+                text-decoration: none;
+            }
+        </style>
+    </head>
 
     <body style="width: 100vw; height: 100vh; background: #008080">
         <div id="window" class="window">
-            <div id="window-top" class="window-top">
-                <p style="color: white; user-select: none">{title}</p>
+            <div style="position: sticky; top: 0; background: #bfbfbf;">
+                <div id="window-top" class="window-top">
+                    <p style="color: white; user-select: none">{title}</p>
+                </div>
             </div>
 
             <div style="padding: 12px">
                 <slot />
             </div>
         </div>
+
+        <footer
+            style="position: fixed; bottom: 0; background: #bfbfbf; width: 100%; height: min-content; padding: 5px;"
+        >
+            <a href="/" class="start-btn">
+                <img src={penguinImg.src} width="30px" height="30px" />
+                Start
+            </a>
+        </footer>
     </body>
     <script is:inline>
         const myWindow = document.getElementById("window");

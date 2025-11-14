@@ -1,10 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 ---
 
-<BaseLayout title="Welcome!">
+<BaseLayout title="Hi bab c:">
 	<p style="color: black">
-		Here's a secret about me: I love writing, but I never do it! Guess it
-		isn't much of a secret, huh?
+		Le posts:
 	</p>
+
+	<ul>
+		{allPosts.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+	</ul>
 </BaseLayout>

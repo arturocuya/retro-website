@@ -23,9 +23,9 @@ La canción cambia de nuevo y lo siento, Mariya Takeuchi, eres espectacular pero
 
 Y como para cerrar el círculo, volvemos a escuchar a YoshiMa, nombre que estoy seguro le encanta que le llamen. Está supertriste, en una forma que envidio profundamente, esa forma que parece rogar salir al mundo a través del buen arte.
 
-Ahora siento que en esta canción particular también él me está mirando al alma, pero no de forma introspectiva, sino gritándome: ESCRIBE SOBRE TU VIDA, IDIOTA.
+Ahora siento que en esta canción particular también él me está mirando al alma, pero no de forma introspectiva, sino gritándome: !ESCRIBE SOBRE TU VIDA, IDIOTA!
 
-Eso haré, querido, eso haré.
+_Eso haré, querido, eso haré._
 
 ![Masayoshi Yamazaki](/images/posts/yoshima.jpeg)
 
